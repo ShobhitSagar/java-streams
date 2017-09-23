@@ -27,6 +27,8 @@ public class Lecture2 {
     @Test
     public void rangeIteratingLists() throws Exception {
         List<Person> people = MockData.getPeople();
+        IntStream.range(0, people.size())
+                .forEach(index -> System.out.println((index + 1) + ". " + people.get(index).getFirstName() + " " + people.get(index).getLastName()));
 
     }
 
